@@ -6,7 +6,12 @@ const withVanillaExtract = createVanillaExtractPlugin()
 // })
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    devIndicators: {
+        appIsrStatus: false,
+        buildActivity: false,
+    },
+}
 
 // module.exports = withVanillaExtract(withMDX(nextConfig))
 module.exports = withVanillaExtract(nextConfig)
