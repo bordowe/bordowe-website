@@ -5,7 +5,6 @@ import { breakpoints } from "@/styles/breakpoints.css"
 export const navbarWrapper = style({
     flexDirection: "column",
     backgroundColor: themeVars.secondaryColor,
-    borderBottom: `1px solid rgba(${themeVars.primaryColor}, 0.07)`,
     clipPath: "inset(0 0 0 0)",
     overflow: "hidden",
     position: "fixed",
@@ -20,6 +19,7 @@ export const navbarWrapper = style({
             justifyContent: "space-between",
             padding: "0 25px",
             boxSizing: "border-box",
+            borderBottom: `1px solid color-mix(in srgb, ${themeVars.primaryColor} 7%, transparent)`,
         },
         [breakpoints.desktop]: {
             padding: "0 50px",
@@ -51,6 +51,7 @@ export const mobileNavGroup = style({
             width: "fit-content",
             height: "100%",
             padding: "15px 0",
+            borderBottom: "none",
         },
     },
 })
